@@ -1,0 +1,45 @@
+#chat2 .form-control {
+  border-color: transparent;
+  }
+  
+  #chat2 .form-control:focus {
+  border-color: transparent;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  .outgoing{
+    /* d-flex flex-row justify-content-end mb-4 pt-1 */
+    display: flex;
+    justify-content: end;
+    margin-bottom: 4px;
+    padding-top: 1px;
+
+  }
+  .incoming{
+    /* d-flex flex-row justify-content-start */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    
+  }
+  
+  .divider:after,
+  .divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+  }
+  .fixed{
+    width: 1500px;
+    height: 800px;
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.039);
+    text-align: center;
+    /* padding: 20px; */
+  }
+  .messageArea{
+    overflow: scroll;
+  }
+  .messageArea::-webkit-scrollbar {
+    display: none;
+}
