@@ -16,6 +16,7 @@ textarea.addEventListener("keyup",function(e){
     if(e.key === "Enter" && textarea.value.trim() != ""){
         sendMsg(textarea.value.trim())
         textarea.value=""
+        updateScroll(messageArea);
     }
     
 })
@@ -54,3 +55,7 @@ function appendMsg(data,type){
 socket.on("message",(data)=>{
     appendMsg(data,"incoming");
 })
+
+function updateScroll(messageArea){
+    messageArea.scrollTop = messageArea.scrollHeight;
+}
