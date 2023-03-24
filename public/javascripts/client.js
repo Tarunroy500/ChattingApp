@@ -1,10 +1,15 @@
 var socket = io();
-let name;
-do{
-    name = prompt('please enter your name: ')
-}while(!name);
-var usernameDiv = document.querySelector(".card-header");
-usernameDiv.innerHTML=`<h5 class="mb-0">${name}</h5>`;
+var name;
+// do{
+//     name = prompt('please enter your name: ')
+// }while(!name);
+var txt= document.querySelector("#name")
+document.querySelector(".button-3").addEventListener("click",()=>{
+    name=txt.value;
+    document.querySelector(".fixed").style.display="none";
+    var usernameDiv = document.querySelector(".card-header");
+    usernameDiv.innerHTML=`<h5 class="mb-0">${name}</h5>`;
+})
 let textarea = document.querySelector("#textarea")
 let messageArea = document.querySelector(".messageArea")
 textarea.addEventListener("keyup",function(e){
